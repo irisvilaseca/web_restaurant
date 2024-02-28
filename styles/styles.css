@@ -1,0 +1,403 @@
+body{
+    margin:0px; 
+}
+/*MENU PRINCIPAL*/
+.menu{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:30px;
+    padding:20px;
+    position: sticky;
+    height:6em;
+    background-color: rgb(37, 37, 37);
+    top:0px; /*Sticky necessita saber on parar i fixed necessita un width*/
+    z-index:2;
+}
+.elemen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid white;
+    line-height: 1.5em;
+    width:11em;
+    height:80%;
+    color:white;
+}
+.elemen:hover{
+    text-decoration: underline;
+}
+/*HEADER IMATGE*/
+.header-main{
+    border:1px solid black;
+    position: relative;
+    background: black;
+}
+.header-main img{
+    width:100%;
+    filter: opacity(50%);
+}
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.img-title{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height:20%;
+    top:50%;
+    left:7%;
+    width:30%;
+    color:white;
+}
+/*********MAIN*************/
+.main-principal{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-main{
+    border:1px solid black;
+    width:70%;
+    padding:20px;
+}
+/*QUI SOM*/
+.container-quisom{
+    display: flex;
+}
+.reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.img-quisom{
+    float:left;
+    width:20%;
+}
+.img-quisom img{
+    width:100%;
+    border-radius: 7%;
+}
+.elem1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:70%;
+    padding:2em;
+}
+/*Treballem la graella*/
+.container-carta{
+    display:grid;
+    width: 100%;
+    grid-template-areas: 'carta-menu carta-menu carta-menu'
+                          'menu1 contingut contingut'
+                          'menu1 imatge1 imatge2'
+                          'menu2 contingut2 contingut2'
+                          'menu2 imatge3 imatge4'; 
+    grid-template-columns: 30% auto auto;  
+    gap:20px;               
+}
+.carta-menu{
+    display:flex;
+    justify-content: center;
+    background-color: darkblue;
+    color:white;
+    width:94%;
+    padding:3%;
+    grid-area: carta-menu;
+}
+.carta-menu-1{
+    grid-area: menu1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid cyan;
+}
+.contingut{
+    grid-area: contingut;
+}
+.imatge1{
+    grid-area: imatge1;
+}
+/*Coloquem la descripció del plat*/
+.img-carta-container{
+    position:relative;
+}
+.descripcio{
+    position: absolute;
+    bottom:4%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.img-carta-container img{
+    width:100%;
+}
+.imatge2{
+    grid-area: imatge2;
+}
+.descripcio {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    width:100%;
+    height: 20%;
+    top:89%;
+    background-color: black;
+    opacity: 0.6;
+}
+.menu2{
+    grid-area:menu2;
+}
+.contingut2{
+    grid-area:contingut2;
+}
+.imatge3{
+    grid-area:imatge3;
+}
+.imatge4{
+    grid-area:imatge4;
+}
+.gallery-container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: center;
+    width:100%;
+    column-gap:3%;
+    row-gap:4vh;
+}
+.elem{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border:1px solid rgb(249, 180, 255);
+    width:22%;
+    border-radius: 3%;
+}
+
+.elem:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.elem img{
+    width:95%;
+    height:95%;
+}
+.elem img:hover{
+    filter: brightness(60%);
+}
+/*Treballem el footer*/
+.footer{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: green;
+    height:10vh;
+    padding:1rem 4rem;
+    color:white;
+}
+.contacte{
+  display:flex;
+  justify-content:flex-start;
+  gap:3em;
+}
+.footer-item{
+  display:flex;
+  align-items:center;
+}
+.footer-item img{
+    height:1em;
+    margin-right: 0.5em;
+}
+
+@media only screen and (max-width: 576px) {
+    h1{
+        font-size: 3em;
+    }
+    .img-title{
+        display: flex;
+        top:50%;
+        width:auto;
+        align-items:flex-start;
+    }
+    .menu{
+        justify-content: flex-start;
+        gap:0em;
+        height:2em;
+        background-color: white;
+    }
+    .elemen{
+        width:7em;
+        color:black;
+    }
+    h2{
+        font-size:2.5em;
+        text-align: center;
+    }
+    .container-quisom {
+        flex-direction: column;
+    }
+    /*Canviem l'ordre de la imatge i el text en mòbils*/
+    .img-quisom {
+        order: -1;
+        width: 100%;
+    }
+    .img-quisom img{
+        border-radius:3%;
+    }
+    .elem1 {
+        order: 0;
+        width: 100%;
+        padding:0em;
+        text-align: justify;
+    }
+    .container-carta{
+        display: flex;  
+        flex-direction: column;
+    }
+    .carta-menu, .nom{
+        display:none;
+    }
+    .carta-menu-1{
+        height:6em;
+    }
+    h3{
+        font-size: 2em;
+    }
+    .contingut, .contingut2{
+        text-align: justify;
+    }
+    .gallery-container{
+        flex-direction:column;
+    }
+    .elem{
+        width:100%;
+    }
+    footer{
+        height:auto;
+    }
+}
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 3em;
+    }
+    .img-title{
+        display: flex;
+        top:50%;
+        width:auto;
+        align-items:flex-start;
+    }
+    .menu{
+        justify-content: flex-start;
+        gap:0em;
+        height:2em;
+        background-color: white;
+    }
+    .elemen{
+        width:7em;
+        color:black;
+    }
+    .header-main img{
+        filter: opacity(30%);
+    }
+    .container-quisom {
+        flex-direction: column;
+    }
+    /*Canviem l'ordre de la imatge i el text en mòbils*/
+    .img-quisom {
+        order: -1;
+        width: 100%;
+    }
+    .img-quisom img{
+        border-radius:3%;
+    }
+    .elem1{
+        width: 94%;
+        padding: 1em;
+        text-align: justify;
+    }
+    /*Treballem la graella*/
+.container-carta{
+    display:grid;
+    width: 100%;
+    grid-template-areas: 'carta-menu carta-menu'
+                          'menu1 contingut'
+                          'menu1 imatge1'
+                          'menu1 imatge2'
+                          'menu2 contingut2'
+                          'menu2 imatge3'
+                          'menu2 imatge4'; 
+    grid-template-columns: 25% auto;  
+    gap:20px;               
+}
+.carta-menu{
+    display:flex;
+    justify-content: center;
+    background-color: darkblue;
+    color:white;
+    width:94%;
+    padding:3%;
+    grid-area: carta-menu;
+}
+.carta-menu-1{
+    grid-area: menu1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid cyan;
+}
+.contingut{
+    grid-area: contingut;
+}
+.imatge1{
+    grid-area: imatge1;
+}
+/*Coloquem la descripció del plat*/
+.img-carta-container{
+    position:relative;
+}
+.descripcio{
+    position: absolute;
+    bottom:4%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.img-carta-container img{
+    width:100%;
+}
+.imatge2{
+    grid-area: imatge2;
+}
+.descripcio {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    width:100%;
+    height: 20%;
+    top:89%;
+    background-color: black;
+    opacity: 0.6;
+}
+.menu2{
+    grid-area:menu2;
+}
+.contingut2{
+    grid-area:contingut2;
+}
+.imatge3{
+    grid-area:imatge3;
+}
+.imatge4{
+    grid-area:imatge4;
+}
+.elem{
+    width:48%;
+}
+}
