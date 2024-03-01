@@ -418,6 +418,7 @@ h1{
     }
     .menu, .footer{
         background-color: var(--header-footer-background);
+        color: var(--dark-mode-color);
     }
     .elemen{
         color:var(--dark-mode-color);
