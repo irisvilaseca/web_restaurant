@@ -227,7 +227,7 @@ h1{
     }
     .img-title{
         display: flex;
-        top:50%;
+        top:35%;
         width:auto;
         align-items:flex-start;
     }
@@ -288,7 +288,7 @@ h1{
         height:auto;
     }
 }
-@media only screen and (max-width: 768px) {
+@media only screen (min-width:576px) and (max-width: 768px) {
     h1{
         font-size: 3em;
     }
@@ -413,7 +413,7 @@ h1{
         background-color: var(--secondary-background);
         color:var(--dark-mode-background);
     }
-    .carta-menu-1, .elem{
+    .carta-menu-1, .elem, .elemen{
         border:1px solid var(--secondary-background)
     }
     .menu, .footer{
